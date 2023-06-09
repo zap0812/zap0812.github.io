@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
     <title>DOS Attacker</title>
@@ -13,21 +13,30 @@
           border: 1px solid #999;
           box-sizing: border-box;
           background: #f2f2f2;
-          margin: 0.5em 0;
+          margin:0.5em 0;
           height: 50px;
           border-radius: 30px;
           font-size: 20px;
       }
+      .local{
+        text-align: center; 
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
       </style>
   </head>
   <body>
-    <h1>DOS Attacker [Version 1.0]</h1>
-    <div style="text-align: center;width: 700px; margin:0 auto;">
-    <p>Zap All rights reserved</p>
-    <p>攻撃対象を入力してください</p>
-    <input type="text" id="target" placeholder="https://example.com" class="txt" />
+    <h1 style="margin-left: 30px;">DOS Attacker [Version 1.0]</h1>
+    <div style="text-align: center;width: 700px; margin:0 auto; position: relative;">
+    <p>1.攻撃対象を入力</p>
+    <p>2.ボタンをクリック</p>
+    <input type="text" id="target" placeholder="Enter the target" class="txt" />
     <button onclick="attack()">攻撃開始</button>
     <p id="count">0回目のアクセス</p>
     </div>
+    <div class=local>
+    <p>©Zap All rights reserved</p>
   </body>
 </html>
