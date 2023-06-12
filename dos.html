@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="ローカル環境で使えるDosツールです。勉強や実験にお使いください。">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DOS Attacker</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="dos-attacker.js"></script>
-    <style>
-      body { overflow-x: hidden;}
-      .txt{
-          display: block;
-          width: 80%;
-          padding: 0.5em;
-          border: 1px solid #999;
-          box-sizing: border-box;
-          background: #f2f2f2;
-          margin:0.5em auto;
-          height: 50px;
-          border-radius: 30px;
-          font-size: 20px;
-        text-align:center;
-      }
-      .local{
-        text-align: center; 
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-      }
-      </style>
-  </head>
-  <body>
-    <h1 style="margin-left: 30px;">DOS Attacker [Version 1.0]</h1>
-    <div style="text-align: center;width: max-width; margin:0 auto; position: relative;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="ローカル環境で使えるDosツールです。勉強や実験にお使いください。">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOS Attacker</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="dos-attacker.js"></script>
+  <link rel="stylesheet" href="bulma.min.css">
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    .txt {
+      display: block;
+      width: 80%;
+      padding: 0.5em;
+      border: 1px solid #999;
+      box-sizing: border-box;
+      background: #f2f2f2;
+      margin: 0.5em auto;
+      height: 50px;
+      border-radius: 30px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .local {
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="notification" class="notification" style="z-index: 1; width: 100%;">
+    ※これは学術研究のためのページであり、犯罪行為を助長するものではありません。
+  </div>
+  <h1 class="title is-size-1" style="margin-left: 30px;">DOS Attacker [Version 1.0]</h1>
+  <div style="text-align: center;width: max-width; margin:0 auto; position: relative;">
     <p>1.攻撃対象を入力(http://もしくはhttps://を含めてください)</p>
     <p>2.ボタンをクリック</p>
     <p>※ポップアップを許可してください</p>
     <input type="text" id="target" placeholder="Enter the target" class="txt" />
+    <progress class="progress" max="100" style="width: 80%; text-align: center ;margin:0.5em auto"></progress>
     <button onclick="attack()"><img src="continue.png" width="50px" alt="攻撃開始" title="攻撃開始"></button>
     <p id="count">0回目のアクセス</p>
-    </div>
-    <div class=local>
+  </div>
+  <div class=local>
     <p>©Zap All rights reserved</p>
-  </body>
+</body>
+
 </html>
