@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dos-attacker.js"></script>
     <style>
-      body { overflow-x: hidden; /* 追加しました */ }
+      body { overflow-x: hidden;}
       .txt{
           display: block;
           width: 80%;
@@ -34,8 +34,9 @@
   <body>
     <h1 style="margin-left: 30px;">DOS Attacker [Version 1.0]</h1>
     <div style="text-align: center;width: max-width; margin:0 auto; position: relative;">
-    <p>1.攻撃対象を入力</p>
+    <p>1.攻撃対象を入力(http://もしくはhttps://を含めてください)</p>
     <p>2.ボタンをクリック</p>
+    <p>※ポップアップを許可してください</p>
     <input type="text" id="target" placeholder="Enter the target" class="txt" />
     <button onclick="attack()"><img src="continue.png" width="50px" alt="攻撃開始" title="攻撃開始"></button>
     <p id="count">0回目のアクセス</p>
